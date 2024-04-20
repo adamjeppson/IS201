@@ -15,7 +15,7 @@
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
-  --bs-red: #dc3545;
+  --bs-red: #ffffff;
   --bs-orange: #fd7e14;
   --bs-yellow: #ffc107;
   --bs-green: #198754;
@@ -469,8 +469,12 @@ output {
   display: inline-block;
 }
 
-iframe {
+.video {
   border: 0;
+  width: 560px;
+  height: 315px;
+  left: calc(50% - 280)
+
 }
 
 summary {
