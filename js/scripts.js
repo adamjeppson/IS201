@@ -27,3 +27,48 @@ window.addEventListener('DOMContentLoaded', () => {
         scrollPos = currentTop;
     });
 })
+
+// Get the modal
+var modal = document.getElementById("imageModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+// Get the navbar
+var navbar = document.getElementById("mainNav");
+
+// Function to show the modal and hide the navbar
+function showModal() {
+    modal.style.display = "block";
+    navbar.style.display = "none"; // Hide the navbar
+}
+
+// Function to hide the modal and show the navbar
+function hideModal() {
+    modal.style.display = "none";
+    navbar.style.display = "block"; // Show the navbar
+}
+
+document.querySelectorAll('img').forEach(function(img) {
+    img.onclick = function() {
+        showModal();
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    };
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    hideModal();
+}
+
+// Also hide the modal when clicking outside of it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        hideModal();
+    }
+}
