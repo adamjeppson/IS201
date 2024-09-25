@@ -1,2 +1,1 @@
-# IS201
-my website for IS 201
+#Blog site for trip reports and resume
